@@ -1,0 +1,55 @@
+//merge sort algorithm
+void mergesort(int a[],int lb,int ub)
+{
+     if(lb<ub)
+     {
+         int mid=(lb+ub)/2;
+         //using recursion
+         mergesort(a, lb, mid);
+         mergesort( a,  mid+1, ub);
+         merge( a, lb, mid,ub);// this function we have to write 
+
+     }
+}
+ void merge(int a,int lb,int mid,int ub)
+ {
+     i=lb;
+     j=mid+1;
+     k=lb;
+     int b[k];
+     while(i<=mid && j<=ub)
+     {
+         if(a[i]<=a[j])
+          { 
+               int k;
+               b[k]=a[i];
+               i++;
+          }
+          else
+          {
+              b[k]=a[j];
+              j++;
+              
+          }
+        k++; 
+     }
+    if(i>mid)
+    {
+        while(j<=ub)
+        {
+            b[k]=a[j];
+            j++;
+            k++;
+        }
+    }
+    else
+    {
+        while(i<= mid)
+        {
+            b[k]=a[i];
+            i++;
+            k++;
+
+        }
+    }
+ }
