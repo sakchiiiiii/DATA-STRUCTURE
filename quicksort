@@ -1,0 +1,43 @@
+//quick sort by divde and conquer algorithm
+//you add this part of code to your quicksort code
+
+void swap(int* a,int* b)
+{
+    int t=*a;
+    *a=*b;
+    *b=t;
+}
+
+int parition(int a,int lb,int ub)
+{
+    int pivot=a[lb]; //pivot
+    int start=lb;
+    int end=ub;
+   while(start<end)
+   { 
+    while(a[start]<=pivot)
+    {
+        start++;
+    }
+    while(a[end]>pivot)
+    {
+        end--;
+    }
+    if(start<end)
+    {
+        swap(a[start],a[end]);
+    }
+   }
+   swap(a[lb],a[end]);
+   return end;
+}
+ 
+void quicksort(int a[],int lb,int ub)
+{
+    if(lb<ub)
+    {
+        int loc=parition(a,lb,ub);
+        quicksort(a,lb,loc-1);
+        quicksort(a,loc+1,ub);
+    }
+}
