@@ -1,4 +1,4 @@
-//quick sort by divde and conquer algorithm
+//funcion to implement quick sort by divde and conquer algorithm
 //you add this part of code to your quicksort code
 
 void swap(int* a,int* b)
