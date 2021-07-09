@@ -1,11 +1,11 @@
-//function to implement swaping
+//function to implement swaping 
 void swap(int *x, int *y)
 {
     int temp = *x;
     *x = *y;
     *y = temp;
 }
- // A function to implement bubble sort
+ // A function to implement bubble sort algo
 void bubbleSort(int arr[], int n)
 {
    int i, j;
