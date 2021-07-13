@@ -11,6 +11,7 @@ void mergesort(int a[],int lb,int ub)
 
      }
 }
+//implementation for merge function
  void merge(int a,int lb,int mid,int ub)
  {
      i=lb;
